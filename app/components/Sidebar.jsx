@@ -20,7 +20,7 @@ const Sidebar = () => {
     <div
       className={`side-bar ${isMini ? "w-[64px]" : "w-[64px] lg:w-[240px]"} ${
         isBarOpen ? "left-0" : "left-[-70px]"
-      } fixed lg:sticky duration-300 top-0 h-screen bg-black pl-[20px] z-[2]`}
+      } fixed lg:sticky duration-300 top-0 h-screen bg-black pl-[20px] z-[3]`}
     >
       <Link
         href="/"
@@ -77,6 +77,13 @@ const Sidebar = () => {
         }}
         className="absolute right-0 top-0 h-full w-[0.5%]"
       />
+
+      {isBarOpen && (
+        <div
+          onClick={() => setIsBarOpen(false)}
+          className="fixed top-0 left-[64px] h-screen w-full z-[2]"
+        ></div>
+      )}
     </div>
   );
 };

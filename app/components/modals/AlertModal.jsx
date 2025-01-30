@@ -50,7 +50,7 @@ const AlertModal = () => {
         onClick={(e) => e.stopPropagation()}
         className={`${
           showModal == "Alert" ? "opacity-100" : "opacity-0"
-        } bg-[#0A0A0A] duration-500 w-[480px] h-[500px] flex flex-col rounded-[8px]`}
+        } bg-[#0A0A0A] duration-500 w-[90%] vsm:w-[80%] xmd:w-[480px] h-[500px] flex flex-col rounded-[8px]`}
       >
         <div className="w-full h-[56px] border-b border-b-[#404040] flex justify-between items-center px-[16px]">
           <p className="font-[500]">Alerts</p>

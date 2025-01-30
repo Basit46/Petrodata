@@ -40,7 +40,7 @@ const Header = () => {
         </button>
       </div>
 
-      <div className="w-full flex items-center justify-between">
+      <div className="w-full flex flex-col vsm:flex-row vsm:items-center gap-[10px] vsm:gap-0 justify-between">
         <div>
           <h1 className="text-[24px] font-[500] text-[#F5F5F5]">Hello, John</h1>
           <p className="text-[#A3A3A3]">{formattedDate}</p>

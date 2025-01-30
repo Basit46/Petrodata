@@ -34,7 +34,7 @@ const SetAlertModal = ({ showSetAlertModal, setShowSetAlertModal }) => {
         onClick={(e) => e.stopPropagation()}
         className={`${
           showSetAlertModal ? "opacity-100" : "opacity-0"
-        } bg-[#0A0A0A] duration-500 w-[480px] h-[500px] flex flex-col rounded-[8px]`}
+        } bg-[#0A0A0A] duration-500 w-[90%] vsm:w-[80%] xmd:w-[480px] h-[500px] flex flex-col rounded-[8px]`}
       >
         <div className="w-full h-[56px]  flex justify-between items-center px-[16px]">
           <p className="font-[500]">Set an Alert</p>
@@ -45,7 +45,7 @@ const SetAlertModal = ({ showSetAlertModal, setShowSetAlertModal }) => {
 
         <div className="flex-1 overflow-y-auto">
           <div className="h-fit px-[16px]">
-            <div className="flex justify-between border-b-[0.8px] border-b-[#404040] pb-[10px]">
+            <div className="flex flex-col vsm:flex-row gap-[10px] justify-between border-b-[0.8px] border-b-[#404040] pb-[10px]">
               <p className="w-[30%] text-[14px] font-[500] text-[#A3A3A3]">
                 Condition
               </p>
@@ -78,14 +78,14 @@ const SetAlertModal = ({ showSetAlertModal, setShowSetAlertModal }) => {
                     <option value="down">Crossing down</option>
                   </select>
                 </div>
-                <div className="w-full flex gap-[10px] justify-between items-center">
+                <div className="w-full flex flex-col vsm:flex-row gap-[10px] justify-between vsm:items-center">
                   <p className="text-[14px] text-[#A3A3A3]">Price:</p>
                   <input
                     value={formData.price}
                     onChange={(e) =>
                       setFormData({ ...formData, price: e.target.value })
                     }
-                    className="flex-1 h-[44px] bg-[#404040] border border-[#525252] rounded-[36px] px-[14px] outline-none"
+                    className="vsm:flex-1 h-[44px] bg-[#404040] border border-[#525252] rounded-[36px] px-[14px] outline-none"
                     type="number"
                   />
                 </div>
@@ -93,7 +93,7 @@ const SetAlertModal = ({ showSetAlertModal, setShowSetAlertModal }) => {
             </div>
 
             <div className="border-b-[0.8px] border-b-[#404040] py-[10px]">
-              <div className="flex justify-between">
+              <div className="flex flex-col vsm:flex-row gap-[10px] justify-between">
                 <p className="w-[30%] text-[14px] font-[500] text-[#A3A3A3]">
                   Trigger
                 </p>
@@ -127,17 +127,17 @@ const SetAlertModal = ({ showSetAlertModal, setShowSetAlertModal }) => {
                   </p>
                 </div>
               </div>
-              <div className="mt-[10px] flex justify-between">
+              <div className="mt-[15px] flex flex-col vsm:flex-row gap-[10px] justify-between">
                 <p className="w-[30%] text-[14px] font-[500] text-[#A3A3A3]">
                   Expiration
                 </p>
                 <div className="flex-1 space-y-[10px]">
-                  <p>Ime</p>
+                  <p>Mar 10, 2025: 10:00AM</p>
                 </div>
               </div>
             </div>
 
-            <div className="flex justify-between border-b-[0.8px] border-b-[#404040] py-[10px]">
+            <div className="flex flex-col vsm:flex-row gap-[10px] justify-between border-b-[0.8px] border-b-[#404040] py-[10px]">
               <p className="w-[30%] text-[14px] font-[500] text-[#A3A3A3]">
                 Alert name
               </p>

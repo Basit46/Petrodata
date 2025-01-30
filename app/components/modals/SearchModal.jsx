@@ -28,7 +28,7 @@ const SearchModal = () => {
         onClick={(e) => e.stopPropagation()}
         className={`${
           showModal == "Search" ? "opacity-100" : "opacity-0"
-        } bg-[#0A0A0A] duration-500 w-[712px] h-[440px] flex flex-col rounded-[8px]`}
+        } bg-[#0A0A0A] duration-500 w-[90%] vsm:w-[80%] xmd:w-[712px] h-fit xmd:h-[440px] flex flex-col rounded-[8px]`}
       >
         <div className="p-[16px] flex gap-[10px] items-center">
           <div className="relative size-[20px]">
@@ -60,7 +60,7 @@ const SearchModal = () => {
           {result == "" ? (
             <div>
               <p className="text-[12px] text-[#A3A3A3]">Popular</p>
-              <div className="ml-[20px] mt-[20px] space-y-[20px]">
+              <div className="ml-[20px] mt-[10px] xmd:mt-[20px] space-y-[10px] xmd:space-y-[20px]">
                 {popularQueries.map((query, i) => (
                   <button
                     onClick={() => {
@@ -68,7 +68,7 @@ const SearchModal = () => {
                       handleSearch();
                     }}
                     key={i}
-                    className="text-[#A3A3A3]"
+                    className="text-[#A3A3A3] text-left"
                   >
                     {query}
                   </button>

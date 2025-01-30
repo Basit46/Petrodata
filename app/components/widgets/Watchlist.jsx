@@ -36,7 +36,7 @@ const Product = ({ name, fullName, data }) => {
 
   return (
     <div className="w-full h-[25%] border-b border-b-[#36353A] last:border-b-0 flex justify-between items-center px-[16px]">
-      <div className="w-[25%]">
+      <div className="w-[30%] sm:w-[25%] mr-[10px] sm:mr-0">
         <div className="flex items-center gap-[4px]">
           <Trend
             size={10}
@@ -50,7 +50,7 @@ const Product = ({ name, fullName, data }) => {
         <p className="text-[12px] font-[500] text-[#A3A3A3]">{fullName}</p>
       </div>
 
-      <div className="w-[165px]">
+      <div className="w-[150px] sm:w-[165px]">
         <PriceChart data={data} />
       </div>
 

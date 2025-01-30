@@ -13,7 +13,7 @@ const Flights = () => {
 
   return (
     <div className="w-full xmd:w-[556px] h-fit xmd:h-[290px] bg-[#171717] rounded-[24px] flex flex-col xmd:flex-row overflow-hidden">
-      <div className="w-full xmd:w-[55%] h-full flex flex-col">
+      <div className="w-full xmd:w-[55%] h-[300px] xmd:h-full flex flex-col">
         <div className="flex items-center gap-[5px] py-[10px] px-[16px]">
           <div className="relative size-[32px]">
             <Image src="/flightIcon.png" alt="flight" fill />

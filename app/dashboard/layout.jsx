@@ -8,7 +8,9 @@ const layout = ({ children }) => {
   return (
     <div className="relative w-full flex">
       <Sidebar />
-      <div className="flex-1 h-full px-[30px]">{children}</div>
+      <div className="w-full flex-1 h-full px-[10px] vsm:px-[30px] overflow">
+        {children}
+      </div>
 
       {/* Modals */}
       <NotificationsModal />

@@ -11,27 +11,27 @@ export const sections = [
   },
   {
     name: "Analysis",
-    path: "/analysis",
+    path: "/dashboard/analysis",
     icon: <FiBarChart2 size={24} />,
   },
   {
     name: "News & Report",
-    path: "/reports",
+    path: "/dashboard/reports",
     icon: <FiBookOpen size={24} />,
   },
   {
     name: "Exclusive report",
-    path: "/exclusivereport",
+    path: "/dashboard/exclusivereport",
     icon: <LuSparkle size={24} />,
   },
   {
     name: "Watchlist",
-    path: "/watchlist",
+    path: "/dashboard/watchlist",
     icon: <BiBookmarkMinus size={24} />,
   },
   {
     name: "Settings",
-    path: "/settings",
+    path: "/dashboard/settings",
     icon: <LuSettings size={24} />,
   },
 ];

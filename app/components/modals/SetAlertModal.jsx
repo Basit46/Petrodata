@@ -1,7 +1,7 @@
 "use client";
 
 import { products } from "@/app/constants";
-import { useGlobalContext } from "@/app/globalContext";
+import { useGlobalContext } from "@/app/context/GlobalContext";
 import { useState } from "react";
 import { GoPlus } from "react-icons/go";
 import { IoClose } from "react-icons/io5";

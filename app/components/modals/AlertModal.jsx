@@ -1,6 +1,6 @@
 "use client";
 
-import { useGlobalContext } from "@/app/globalContext";
+import { useGlobalContext } from "@/app/context/GlobalContext";
 import { useState } from "react";
 import { GoPlus, GoDotFill, GoPlay } from "react-icons/go";
 import { LuPenLine, LuTrash } from "react-icons/lu";

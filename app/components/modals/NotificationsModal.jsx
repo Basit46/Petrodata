@@ -1,7 +1,7 @@
 "use client";
 
 import { notifications } from "@/app/constants";
-import { useGlobalContext } from "@/app/globalContext";
+import { useGlobalContext } from "@/app/context/GlobalContext";
 import Image from "next/image";
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";

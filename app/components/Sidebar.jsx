@@ -6,10 +6,11 @@ import { sections } from "../constants";
 import { FiChevronsLeft, FiChevronsRight } from "react-icons/fi";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { useGlobalContext } from "../GlobalContext";
+import { useGlobalContext } from "../context/GlobalContext";
 
 const Sidebar = () => {
   const pathname = usePathname();
+
   const { isBarOpen, setIsBarOpen } = useGlobalContext();
 
   //Manage the expansion and minimizing the sidebar
@@ -41,6 +42,7 @@ const Sidebar = () => {
       <div className="mt-[120px] space-y-[5px]">
         {sections.map((section, i) => (
           <Link
+            key={i}
             href={section.path}
             className={`${
               section.path == pathname

@@ -5,7 +5,7 @@ import { FiSearch, FiMoon, FiSun } from "react-icons/fi";
 import { FaTimes } from "react-icons/fa";
 import { LuBell } from "react-icons/lu";
 import { LuAlarmClockPlus } from "react-icons/lu";
-import { useGlobalContext } from "../globalContext";
+import { useGlobalContext } from "../context/GlobalContext";
 import Link from "next/link";
 import Image from "next/image";
 import { BsChevronBarRight } from "react-icons/bs";
@@ -32,7 +32,10 @@ const Header = () => {
           </div>
         </Link>
 
-        <button onClick={() => setIsBarOpen(true)}>
+        <button
+          onClick={() => setIsBarOpen((prev) => !prev)}
+          className="text-[20px]"
+        >
           {isBarOpen ? <FaTimes /> : <BsChevronBarRight />}
         </button>
       </div>
@@ -74,8 +77,8 @@ const Header = () => {
               darkMode ? "bg-[#00695C]" : "bg-[#00695C]/50"
             } relative w-[72px] h-[36px] rounded-[36px] px-[10px] flex justify-between items-center text-[15px]`}
           >
-            <FiMoon className="" color={darkMode && "#00695C"} />
-            <FiSun className="" color={!darkMode && "#00695C"} />
+            <FiMoon className="" color={darkMode ? "#00695C" : ""} />
+            <FiSun className="" color={!darkMode ? "#00695C" : ""} />
 
             <div
               className={`${

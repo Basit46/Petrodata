@@ -25,7 +25,9 @@ const Flights = () => {
         </div>
 
         <div className="flex-1 w-full pl-[16px]">
-          <FlightBarChart />
+          <FlightBarChart
+            data={isDomestic ? flightData.domestic : flightData.international}
+          />
         </div>
 
         <div className="mt-auto h-[44px] border-t border-t-[#404040] px-[16px] flex gap-[10px]">
@@ -81,10 +83,10 @@ import {
   CartesianGrid,
 } from "recharts";
 
-const FlightBarChart = () => {
+const FlightBarChart = ({ data }) => {
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <BarChart data={flightData} barSize={12.29}>
+      <BarChart data={data} barSize={12.29}>
         <CartesianGrid strokeDasharray="1 1" stroke="#262626" />
         <XAxis
           dataKey="date"

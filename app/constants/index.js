@@ -603,71 +603,140 @@ export const watchlistData = [
   },
 ];
 
-export const depotData = [
-  {
-    station: "NIPCO",
-    location: "Lagos",
-    data: [
-      { day: "Day 1", price: 920.5 },
-      { day: "Day 2", price: 770.0 },
-      { day: "Day 3", price: 1030.0 },
-      { day: "Day 4", price: 810.0 },
-      { day: "Day 5", price: 725.0 },
-      { day: "Day 6", price: 680.0 },
-      { day: "Day 7", price: 790.0 },
-      { day: "Day 8", price: 860.0 },
-      { day: "Day 9", price: 980.0 },
-      { day: "Day 10", price: 890.0 },
-      { day: "Day 11", price: 1075.0 },
-      { day: "Day 12", price: 945.0 },
-      { day: "Day 13", price: 1020.0 },
-      { day: "Day 14", price: 1150.0 },
-      { day: "Day 15", price: 1250.0 },
-    ],
-  },
-  {
-    station: "Oando PLC",
-    location: "Rivers",
-    data: [
-      { day: "Day 1", price: 950.0 },
-      { day: "Day 2", price: 805.0 },
-      { day: "Day 3", price: 1025.0 },
-      { day: "Day 4", price: 840.0 },
-      { day: "Day 5", price: 765.0 },
-      { day: "Day 6", price: 655.0 },
-      { day: "Day 7", price: 710.0 },
-      { day: "Day 8", price: 875.0 },
-      { day: "Day 9", price: 1010.0 },
-      { day: "Day 10", price: 920.0 },
-      { day: "Day 11", price: 1090.0 },
-      { day: "Day 12", price: 960.0 },
-      { day: "Day 13", price: 1065.0 },
-      { day: "Day 14", price: 1120.0 },
-      { day: "Day 15", price: 1230.0 },
-    ],
-  },
-  {
-    station: "MRS Oil Nigeri...",
-    location: "Oyo",
-    data: [
-      { day: "Day 1", price: 910.5 },
-      { day: "Day 2", price: 780.0 },
-      { day: "Day 3", price: 990.0 },
-      { day: "Day 4", price: 825.0 },
-      { day: "Day 5", price: 745.0 },
-      { day: "Day 6", price: 660.0 },
-      { day: "Day 7", price: 730.0 },
-      { day: "Day 8", price: 880.0 },
-      { day: "Day 9", price: 970.0 },
-      { day: "Day 10", price: 910.0 },
-      { day: "Day 11", price: 1080.0 },
-      { day: "Day 12", price: 940.0 },
-      { day: "Day 13", price: 1035.0 },
-      { day: "Day 14", price: 1130.0 },
-      { day: "Day 15", price: 1215.0 },
-    ],
-  },
-];
+export const depotData = {
+  PMS: [
+    {
+      station: "NIPCO",
+      location: "Lagos",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 900 + Math.random() * 350,
+      })),
+    },
+    {
+      station: "Oando PLC",
+      location: "Rivers",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 900 + Math.random() * 350,
+      })),
+    },
+    {
+      station: "MRS Oil Nigeria",
+      location: "Oyo",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 900 + Math.random() * 350,
+      })),
+    },
+  ],
+
+  DPK: [
+    {
+      station: "NIPCO",
+      location: "Lagos",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 900 + Math.random() * 350,
+      })),
+    },
+    {
+      station: "Oando PLC",
+      location: "Rivers",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 900 + Math.random() * 350,
+      })),
+    },
+    {
+      station: "MRS Oil Nigeria",
+      location: "Oyo",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 900 + Math.random() * 350,
+      })),
+    },
+  ],
+
+  LPG: [
+    {
+      station: "NIPCO",
+      location: "Lagos",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 1200 + Math.random() * 100,
+      })),
+    },
+    {
+      station: "Oando PLC",
+      location: "Rivers",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 1200 + Math.random() * 100,
+      })),
+    },
+    {
+      station: "MRS Oil Nigeria",
+      location: "Oyo",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 1200 + Math.random() * 100,
+      })),
+    },
+  ],
+  AGO: [
+    {
+      station: "NIPCO",
+      location: "Lagos",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 900 + Math.random() * 100, // Fluctuating between 900 and 1000
+      })),
+    },
+    {
+      station: "Oando PLC",
+      location: "Rivers",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 900 + Math.random() * 100,
+      })),
+    },
+    {
+      station: "MRS Oil Nigeria",
+      location: "Oyo",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 900 + Math.random() * 100,
+      })),
+    },
+  ],
+  ICE: [
+    {
+      station: "NIPCO",
+      location: "Lagos",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 900 + Math.random() * 100,
+      })),
+    },
+    {
+      station: "Oando PLC",
+      location: "Rivers",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 900 + Math.random() * 100,
+      })),
+    },
+    {
+      station: "MRS Oil Nigeria",
+      location: "Oyo",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 900 + Math.random() * 100,
+      })),
+    },
+  ],
+};
 
 export const airportData = [
   { name: "Murtala Muhammed International", flights: 12489 },
@@ -677,41 +746,81 @@ export const airportData = [
   { name: "Akanu Ibiam International", flights: 489 },
   { name: "Murtala Muhammed Domestic", flights: 89 },
 ];
-export const flightData = [
-  {
-    date: "24 Jan",
-    arrivalsCommercial: 120000,
-    departuresCommercial: 110000,
-    arrivalsMilitary: 30000,
-    departuresMilitary: 28000,
-    arrivalsPrivate: 25000,
-    departuresPrivate: 23000,
-  },
-  {
-    date: "31 Jan",
-    arrivalsCommercial: 130000,
-    departuresCommercial: 125000,
-    arrivalsMilitary: 35000,
-    departuresMilitary: 34000,
-    arrivalsPrivate: 26000,
-    departuresPrivate: 24000,
-  },
-  {
-    date: "7 Feb",
-    arrivalsCommercial: 150000,
-    departuresCommercial: 140000,
-    arrivalsMilitary: 38000,
-    departuresMilitary: 36000,
-    arrivalsPrivate: 27000,
-    departuresPrivate: 25000,
-  },
-  {
-    date: "14 Feb",
-    arrivalsCommercial: 160000,
-    departuresCommercial: 155000,
-    arrivalsMilitary: 40000,
-    departuresMilitary: 39000,
-    arrivalsPrivate: 28000,
-    departuresPrivate: 26000,
-  },
-];
+export const flightData = {
+  international: [
+    {
+      date: "24 Jan",
+      arrivalsCommercial: 120000,
+      departuresCommercial: 110000,
+      arrivalsMilitary: 30000,
+      departuresMilitary: 28000,
+      arrivalsPrivate: 25000,
+      departuresPrivate: 23000,
+    },
+    {
+      date: "31 Jan",
+      arrivalsCommercial: 130000,
+      departuresCommercial: 125000,
+      arrivalsMilitary: 35000,
+      departuresMilitary: 34000,
+      arrivalsPrivate: 26000,
+      departuresPrivate: 24000,
+    },
+    {
+      date: "7 Feb",
+      arrivalsCommercial: 150000,
+      departuresCommercial: 140000,
+      arrivalsMilitary: 38000,
+      departuresMilitary: 36000,
+      arrivalsPrivate: 27000,
+      departuresPrivate: 25000,
+    },
+    {
+      date: "14 Feb",
+      arrivalsCommercial: 160000,
+      departuresCommercial: 155000,
+      arrivalsMilitary: 40000,
+      departuresMilitary: 39000,
+      arrivalsPrivate: 28000,
+      departuresPrivate: 26000,
+    },
+  ],
+  domestic: [
+    {
+      date: "24 Jan",
+      arrivalsCommercial: 360000,
+      departuresCommercial: 330000,
+      arrivalsMilitary: 90000,
+      departuresMilitary: 84000,
+      arrivalsPrivate: 75000,
+      departuresPrivate: 69000,
+    },
+    {
+      date: "31 Jan",
+      arrivalsCommercial: 390000,
+      departuresCommercial: 375000,
+      arrivalsMilitary: 105000,
+      departuresMilitary: 102000,
+      arrivalsPrivate: 78000,
+      departuresPrivate: 72000,
+    },
+    {
+      date: "7 Feb",
+      arrivalsCommercial: 450000,
+      departuresCommercial: 420000,
+      arrivalsMilitary: 114000,
+      departuresMilitary: 108000,
+      arrivalsPrivate: 81000,
+      departuresPrivate: 75000,
+    },
+    {
+      date: "14 Feb",
+      arrivalsCommercial: 480000,
+      departuresCommercial: 465000,
+      arrivalsMilitary: 120000,
+      departuresMilitary: 117000,
+      arrivalsPrivate: 84000,
+      departuresPrivate: 78000,
+    },
+  ],
+};

@@ -4,10 +4,16 @@ import { IoTriangleSharp as Trend } from "react-icons/io5";
 import PriceChart from "../PriceChart";
 import { depotData, products } from "../../constants";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Depot = () => {
   const [selected, setSelected] = useState("PMS");
+
+  const [productData, setProductData] = useState(depotData[selected]);
+
+  useEffect(() => {
+    setProductData(depotData[selected]);
+  }, [selected]);
 
   return (
     <div className="w-full xmd:w-[556px] h-[290px] bg-[#171717] rounded-[24px] flex flex-col">
@@ -18,12 +24,12 @@ const Depot = () => {
         <p>Depot</p>
       </div>
 
-      {depotData.map((product, index) => (
+      {productData.map((station, index) => (
         <Station
           key={index}
-          stationName={product.station}
-          location={product.location}
-          data={product.data}
+          stationName={station.station}
+          location={station.location}
+          data={station.data}
         />
       ))}
 
@@ -49,6 +55,8 @@ const Depot = () => {
 export default Depot;
 
 const Station = ({ stationName, location, data }) => {
+  if (!data) return null;
+
   const firstPrice = data[0].price;
   const lastPrice = data[data.length - 1].price;
 

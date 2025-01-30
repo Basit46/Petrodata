@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PetroData
 
-## Getting Started
+PetroData is a web application built with Next.js and React to visualize petroleum product price fluctuations across different depots.
 
-First, run the development server:
+![PetroData Preview](public/preview.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[PetroData on Vercel](https://petrodata-basit.vercel.app/)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📌 Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Displays price variations for different petroleum products.
+- Uses `recharts` for interactive data visualization.
+- Styled with Tailwind CSS for a responsive UI.
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework**: Next.js 14
+- **UI Library**: React 18
+- **Charts**: Recharts
+- **Styling**: Tailwind CSS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚙️ Installation & Setup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/petrodata.git
+   cd petrodata
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Run the development server:
+   ```sh
+   npm run dev
+   ```
+4. Open `http://localhost:3000` in your browser.
 
-## Deploy on Vercel
+## 📜 Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `npm run dev` - Runs the app in development mode.
+- `npm run build` - Builds the production version.
+- `npm run start` - Starts the production server.
+- `npm run lint` - Lints the code for errors.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 📌 Any assumptions or design decisions you made
+
+Used mock data to work on the charts
+
+## 📄 License
+
+This project is for assessment purposes and is not open-source.

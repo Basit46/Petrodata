@@ -15,11 +15,15 @@ import {
 
 const widgetSections = [
   { name: "Product retail price", path: "/widgets", icon: <LuTag /> },
-  { name: "Flight widget", path: "/widgets", icon: <LuPlane /> },
-  { name: "Depot widget", path: "/widgets", icon: <LuWarehouse /> },
-  { name: "News widget", path: "/widgets", icon: <LuNewspaper /> },
-  { name: "Report widget", path: "/widgets", icon: <LuFile /> },
-  { name: "Exchange rate", path: "/widgets", icon: <LuArrowRightLeft /> },
+  { name: "Flight widget", path: "/widgets/flight", icon: <LuPlane /> },
+  { name: "Depot widget", path: "/widgets/depot", icon: <LuWarehouse /> },
+  { name: "News widget", path: "/widgets/news", icon: <LuNewspaper /> },
+  { name: "Report widget", path: "/widgets/report", icon: <LuFile /> },
+  {
+    name: "Exchange rate",
+    path: "/widgets/exchange",
+    icon: <LuArrowRightLeft />,
+  },
 ];
 
 const WidgetSideBar = () => {
@@ -41,7 +45,9 @@ const WidgetSideBar = () => {
           <Link
             key={i}
             href={item.path}
-            className="w-full h-[36px] px-[10px] hover:bg-[#404040] rounded-[36px] flex items-center gap-[8px]"
+            className={`${
+              pathname === item.path ? "bg-[#404040]" : ""
+            } w-full h-[36px] px-[10px] hover:bg-[#404040] rounded-[36px] flex items-center gap-[8px]`}
           >
             {item.icon}
             <p className="text-[14px] font-[500] text-[#E5E5E5]">{item.name}</p>

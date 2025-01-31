@@ -824,3 +824,78 @@ export const flightData = {
     },
   ],
 };
+
+export const reports = {
+  31: [
+    {
+      title: "PMS - Aug 12-17",
+      file: "",
+    },
+    {
+      title: "DPK - Aug 12-17",
+      file: "",
+    },
+    {
+      title: "AGO - Aug 12-17",
+      file: "",
+    },
+    {
+      title: "ICE - Aug 12-17",
+      file: "",
+    },
+  ],
+  30: [
+    {
+      title: "PMS - Aug 12-17",
+      file: "",
+    },
+    {
+      title: "DPK - Aug 12-17",
+      file: "",
+    },
+    {
+      title: "AGO - Aug 12-17",
+      file: "",
+    },
+    {
+      title: "ICE - Aug 12-17",
+      file: "",
+    },
+  ],
+  29: [
+    {
+      title: "PMS - Aug 12-17",
+      file: "",
+    },
+    {
+      title: "DPK - Aug 12-17",
+      file: "",
+    },
+    {
+      title: "AGO - Aug 12-17",
+      file: "",
+    },
+    {
+      title: "ICE - Aug 12-17",
+      file: "",
+    },
+  ],
+  28: [
+    {
+      title: "PMS - Aug 12-17",
+      file: "",
+    },
+    {
+      title: "DPK - Aug 12-17",
+      file: "",
+    },
+    {
+      title: "AGO - Aug 12-17",
+      file: "",
+    },
+    {
+      title: "ICE - Aug 12-17",
+      file: "",
+    },
+  ],
+};

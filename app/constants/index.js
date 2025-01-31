@@ -899,3 +899,13 @@ export const reports = {
     },
   ],
 };
+
+export const dollarRates = [
+  { time: "24 Jan, 2025", price: 1200 },
+  { time: "25 Jan, 2025", price: 1350 },
+  { time: "26 Jan, 2025", price: 980 },
+  { time: "27 Jan, 2025", price: 1420 },
+  { time: "28 Jan, 2025", price: 1100 },
+  { time: "29 Jan, 2025", price: 1250 },
+  { time: "30 Jan, 2025", price: 1470 },
+];

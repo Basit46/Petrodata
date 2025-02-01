@@ -4,7 +4,7 @@
 
 @layer components {
   .select-size-wrap {
-    @apply mt-auto flex items-center justify-center gap-[20px] py-[10px];
+    @apply mt-auto w-full h-[36px] flex items-center justify-center gap-[20px] py-[10px];
   }
   .select-size-wrap button {
     @apply size-[36px] rounded-full border border-[#737373] hover:bg-[#262626] grid place-items-center text-[14px] font-[500] duration-300;

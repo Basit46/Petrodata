@@ -2,7 +2,7 @@ import React from "react";
 
 const SelectSize = ({ size, setSize }) => {
   return (
-    <div className="select-size-wrap">
+    <div className="select-size-wrap flex-shrink-0">
       <button
         onClick={() => setSize("S")}
         className={size === "S" ? "bg-[#262626]" : "bg-[#525252]"}

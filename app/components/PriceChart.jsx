@@ -9,7 +9,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const PriceChart = ({ data }) => {
+const PriceChart = ({ data, chartHeight }) => {
   if (!data?.length) return null;
 
   const firstPrice = data[0].price;
@@ -20,7 +20,7 @@ const PriceChart = ({ data }) => {
   const gradientId = `colorPrice-${firstPrice < lastPrice ? "up" : "down"}`;
 
   return (
-    <ResponsiveContainer width="100%" height={56}>
+    <ResponsiveContainer width="100%" height={chartHeight || 56}>
       <AreaChart
         data={data}
         margin={{ top: 10, right: 30, left: 0, bottom: 0 }}

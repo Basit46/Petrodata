@@ -24,14 +24,16 @@ const Depot = () => {
         <p>Depot</p>
       </div>
 
-      {productData.map((station, index) => (
-        <Station
-          key={index}
-          stationName={station.station}
-          location={station.location}
-          data={station.data}
-        />
-      ))}
+      {productData
+        .filter((_, i) => i < 3)
+        .map((station, index) => (
+          <Station
+            key={index}
+            stationName={station.station}
+            location={station.location}
+            data={station.data}
+          />
+        ))}
 
       <div className="mt-auto h-[44px] border-t border-t-[#404040] px-[16px] flex gap-[10px]">
         {products.map((product, i) => (

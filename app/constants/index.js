@@ -629,8 +629,47 @@ export const depotData = {
         price: 900 + Math.random() * 350,
       })),
     },
+    {
+      station: "Total Nigeria PLC",
+      location: "Abuja",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 900 + Math.random() * 350,
+      })),
+    },
+    {
+      station: "Conoil PLC",
+      location: "Kano",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 900 + Math.random() * 350,
+      })),
+    },
+    {
+      station: "Ardova PLC",
+      location: "Enugu",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 900 + Math.random() * 350,
+      })),
+    },
+    {
+      station: "Chipet PLC",
+      location: "Kaduna",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 900 + Math.random() * 350,
+      })),
+    },
+    {
+      station: "Hassan PLC",
+      location: "Benin",
+      data: [...Array(15)].map((_, i) => ({
+        day: `Day ${i + 1}`,
+        price: 900 + Math.random() * 350,
+      })),
+    },
   ],
-
   DPK: [
     {
       station: "NIPCO",
@@ -657,7 +696,6 @@ export const depotData = {
       })),
     },
   ],
-
   LPG: [
     {
       station: "NIPCO",
@@ -690,7 +728,7 @@ export const depotData = {
       location: "Lagos",
       data: [...Array(15)].map((_, i) => ({
         day: `Day ${i + 1}`,
-        price: 900 + Math.random() * 100, // Fluctuating between 900 and 1000
+        price: 900 + Math.random() * 100,
       })),
     },
     {

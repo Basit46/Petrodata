@@ -30,7 +30,7 @@ const WidgetSideBar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="w-[240px] px-[20px] pt-[30px]">
+    <div className="w-[240px] px-[20px] pt-[30px] sticky top-0 h-screen">
       <div className="w-full h-[44px] bg-[#404040] rounded-[36px] border border-[#525252] flex px-[10px] items-center gap-[5px]">
         <LuSearch size={15} color="#A3A3A3" className="flex-shrink-0" />
         <input

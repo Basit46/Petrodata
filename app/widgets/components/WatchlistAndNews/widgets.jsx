@@ -9,7 +9,7 @@ import { SiApplenews } from "react-icons/si";
 export const SmallWidget = () => {
   return (
     <div className="relative group w-[240px] min-h-[240px] bg-[#171717] rounded-[12.4px] py-[5px] flex flex-col">
-      <SelectPlusIcon />
+      <SelectPlusIcon id={4} size="S" />
       <div className="flex-1 flex flex-col">
         {watchlistData
           .filter((_, i) => i < 3)
@@ -51,7 +51,7 @@ export const SmallWidget = () => {
 export const MediumWidget = () => {
   return (
     <div className="relative group w-full h-fit bg-[#171717] rounded-[12.4px] py-[5px]">
-      <SelectPlusIcon />
+      <SelectPlusIcon id={4} size="M" />
 
       <div className="grid grid-cols-2">
         {watchlistData.map((product, index) => (
@@ -96,7 +96,7 @@ export const MediumWidget = () => {
 export const LargeWidget = () => {
   return (
     <div className="relative group w-[90%] h-fit bg-[#171717] rounded-[12.4px] py-[5px]">
-      <SelectPlusIcon />
+      <SelectPlusIcon id={4} size="L" />
 
       <div className="grid grid-cols-2">
         {watchlistData.map((product, index) => (

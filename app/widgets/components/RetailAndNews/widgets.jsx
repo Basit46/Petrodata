@@ -7,35 +7,10 @@ import { IoTriangleSharp as Trend } from "react-icons/io5";
 import PriceChart from "@/app/components/PriceChart";
 import { SiApplenews } from "react-icons/si";
 
-function analyzePrices(data) {
-  const prices = data.map((item) => item.price);
-  const sortedPrices = [...prices].sort((a, b) => a - b);
-
-  const highestPrice = Math.max(...prices).toFixed(2);
-  const lowestPrice = Math.min(...prices).toFixed(2);
-  const medianPrice =
-    sortedPrices.length % 2 === 0
-      ? (sortedPrices[sortedPrices.length / 2 - 1] +
-          sortedPrices[sortedPrices.length / 2]) /
-        2
-      : sortedPrices[Math.floor(sortedPrices.length / 2)];
-
-  const priceChange = (prices[prices.length - 1] - prices[0]).toFixed(2);
-  const priceChangePercent = ((priceChange / prices[0]) * 100).toFixed(2);
-
-  return {
-    highestPrice,
-    lowestPrice,
-    medianPrice,
-    priceChange,
-    priceChangePercent: `${priceChangePercent}%`,
-  };
-}
-
 export const SmallWidget = () => {
   return (
     <div className="relative group size-[240px] bg-[#171717] rounded-[12.4px] py-[5px] px-[10px] flex flex-col justify-between gap-[10px]">
-      <SelectPlusIcon />
+      <SelectPlusIcon id={2} size="S" />
 
       <div className="w-full h-fit flex items-center justify-between gap-[10px] ">
         <div className="">
@@ -89,7 +64,7 @@ export const SmallWidget = () => {
 export const MediumWidget = () => {
   return (
     <div className="relative group w-full h-fit bg-[#171717] rounded-[12.4px] py-[5px]">
-      <SelectPlusIcon />
+      <SelectPlusIcon id={2} size="M" />
 
       <div className="w-full h-[25%] px-[10px] flex justify-between gap-[10px] items-center">
         <div className="">
@@ -154,7 +129,7 @@ export const MediumWidget = () => {
 export const LargeWidget = () => {
   return (
     <div className="relative group w-[90%] h-fit bg-[#171717] rounded-[12.4px] py-[5px]">
-      <SelectPlusIcon />
+      <SelectPlusIcon id={2} size="L" />
 
       <div className="w-full h-[25%] px-[10px] flex justify-between gap-[10px] items-center">
         <div className="">
@@ -213,3 +188,28 @@ export const LargeWidget = () => {
     </div>
   );
 };
+
+function analyzePrices(data) {
+  const prices = data.map((item) => item.price);
+  const sortedPrices = [...prices].sort((a, b) => a - b);
+
+  const highestPrice = Math.max(...prices).toFixed(2);
+  const lowestPrice = Math.min(...prices).toFixed(2);
+  const medianPrice =
+    sortedPrices.length % 2 === 0
+      ? (sortedPrices[sortedPrices.length / 2 - 1] +
+          sortedPrices[sortedPrices.length / 2]) /
+        2
+      : sortedPrices[Math.floor(sortedPrices.length / 2)];
+
+  const priceChange = (prices[prices.length - 1] - prices[0]).toFixed(2);
+  const priceChangePercent = ((priceChange / prices[0]) * 100).toFixed(2);
+
+  return {
+    highestPrice,
+    lowestPrice,
+    medianPrice,
+    priceChange,
+    priceChangePercent: `${priceChangePercent}%`,
+  };
+}

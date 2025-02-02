@@ -18,7 +18,7 @@ export const SmallWidget = () => {
 
   return (
     <div className="relative group min-w-[240px] min-h-[240px] bg-[#171717] rounded-[12.4px] flex flex-col">
-      <SelectPlusIcon />
+      <SelectPlusIcon id={6} size="S" />
 
       <div className="px-[10px] pt-[10px] flex items-center justify-between">
         <div className="flex gap-[10px] items-center">
@@ -83,7 +83,7 @@ export const MediumWidget = () => {
 
   return (
     <div className="relative group w-full h-[150px] bg-[#171717] rounded-[12.4px] flex flex-col">
-      <SelectPlusIcon />
+      <SelectPlusIcon id={6} size="M" />
 
       <div className="flex pt-[10px] px-[5px] gap-[10px] items-center">
         <div className="relative size-[16.53px]">
@@ -132,7 +132,7 @@ export const LargeWidget = () => {
 
   return (
     <div className="relative group w-full h-fit bg-[#171717] rounded-[12.4px] flex flex-col">
-      <SelectPlusIcon />
+      <SelectPlusIcon id={6} size="L" />
 
       <div className="flex pt-[10px] px-[5px] gap-[10px] items-center">
         <div className="relative size-[16.53px]">

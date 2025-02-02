@@ -9,7 +9,7 @@ import PriceChart from "@/app/components/PriceChart";
 export const SmallWidget = () => {
   return (
     <div className="relative group w-[240px] h-[240px] py-[10px] bg-[#171717] rounded-[12.4px]">
-      <SelectPlusIcon />
+      <SelectPlusIcon id={3} size="S" />
       {watchlistData.map((product, index) => (
         <ProductSmall
           key={index}
@@ -25,7 +25,7 @@ export const SmallWidget = () => {
 export const MediumWidget = () => {
   return (
     <div className="relative group w-full h-[149.8px] bg-[#171717] rounded-[12.4px]">
-      <SelectPlusIcon />
+      <SelectPlusIcon id={3} size="M" />
       {watchlistData.map((product, index) => (
         <Product
           key={index}
@@ -41,7 +41,7 @@ export const MediumWidget = () => {
 export const LargeWidget = () => {
   return (
     <div className="relative group w-[90%] h-fit bg-[#171717] rounded-[12.4px] py-[5px]">
-      <SelectPlusIcon />
+      <SelectPlusIcon id={3} size="L" />
       {watchlistData.map((product, index) => (
         <Product
           key={index}

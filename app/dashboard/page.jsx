@@ -14,29 +14,29 @@ import RetailAndNews from "../components/widgets/retailandnews/retailandnews";
 import Watchlist from "../components/widgets/watchlist/watchlist";
 import WatchlistAndNews from "../components/widgets/watchlistandnews/watchlistandnews";
 
+export const widgetList = {
+  1: Retail,
+  2: RetailAndNews,
+  3: Watchlist,
+  4: WatchlistAndNews,
+  5: Flight,
+  6: Depot,
+  7: News,
+  8: Report,
+  9: Exchange,
+};
+
 const Page = () => {
   const { selectedWidgets } = useGlobalContext();
-
-  const widgets = {
-    1: Retail,
-    2: RetailAndNews,
-    3: Watchlist,
-    4: WatchlistAndNews,
-    5: Flight,
-    6: Depot,
-    7: News,
-    8: Report,
-    9: Exchange,
-  };
 
   return (
     <div>
       <Header />
 
       <div className="py-[30px]">
-        <div className="flex flex-wrap gap-4 justify-center vsm:justify-start">
+        <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
           {selectedWidgets.map(({ id, size }) => {
-            const WidgetComponent = widgets[id];
+            const WidgetComponent = widgetList[id];
             return WidgetComponent ? (
               <WidgetComponent key={id} size={size} />
             ) : null;

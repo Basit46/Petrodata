@@ -993,7 +993,3 @@ export const PMSWeekData = [
   { day: "SAT", price: 650.0 },
   { day: "SUN", price: 910.0 },
 ];
-
-export const widgets = {
-  1: "Retail",
-};

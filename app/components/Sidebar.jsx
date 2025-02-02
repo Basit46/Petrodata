@@ -24,7 +24,7 @@ const Sidebar = () => {
     >
       <Link
         href="/"
-        className="mt-[20px] flex items-center gap-[5px] overflow-hidden"
+        className="hidden mt-[20px] lg:flex items-center gap-[5px] overflow-hidden"
       >
         <div className="relative size-[32px] flex-shrink-0">
           <Image src="/logo.png" alt="logo" fill />

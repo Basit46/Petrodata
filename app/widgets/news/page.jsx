@@ -2,44 +2,9 @@
 
 import SelectPlusIcon from "@/app/components/SelectPlusIcon";
 import SelectSize from "@/app/components/SelectSize";
+import { news } from "@/app/constants";
 import React, { useState } from "react";
 import { SiApplenews } from "react-icons/si";
-
-const news = [
-  {
-    paper: "Vanguard",
-    tags: [{ tag: "ICE", color: "#00796B" }],
-    title:
-      "Shareholders Enjoy a Massive Windfall as BP Expands Global Operations",
-    content:
-      "BP’s shareholders can expect a multibillion-dollar payout this year after the oil giant reported better than expected quarterly profits of almost $2.8 billion and set out plans to develop a new oil hub in the Gulf of Mexico.",
-    img: "",
-  },
-  {
-    paper: "Vanguard",
-    tags: [{ tag: "ICE", color: "#00796B" }],
-    title: "Eni granted regulator consent for NAOC sales to Oando",
-    content:
-      "BP’s shareholders can expect a multibillion-dollar payout this year after the oil giant reported better than expected quarterly profits of almost $2.8 billion and set out plans to develop a new oil hub in the Gulf of Mexico.",
-    img: "",
-  },
-  {
-    paper: "Vanguard",
-    tags: [{ tag: "ICE", color: "#00796B" }],
-    title: "Eni granted regulator consent for NAOC sales to Oando",
-    content:
-      "BP’s shareholders can expect a multibillion-dollar payout this year after the oil giant reported better than expected quarterly profits of almost $2.8 billion and set out plans to develop a new oil hub in the Gulf of Mexico.",
-    img: "",
-  },
-  {
-    paper: "Vanguard",
-    tags: [{ tag: "ICE", color: "#00796B" }],
-    title: "Eni granted regulator consent for NAOC sales to Oando",
-    content:
-      "BP’s shareholders can expect a multibillion-dollar payout this year after the oil giant reported better than expected quarterly profits of almost $2.8 billion and set out plans to develop a new oil hub in the Gulf of Mexico.",
-    img: "",
-  },
-];
 
 const page = () => {
   const [size, setSize] = useState("S"); // "S" / "M" / "L"
@@ -124,7 +89,7 @@ const MediumWidget = () => {
                   </span>
                 </div>
                 <p className="font-[600] text-[8.26px]">{item.title}</p>
-                <p className="text-[6.2px] font-gray">
+                <p className="text-[6.2px] text-gray">
                   {item.content.length > 170
                     ? item.content.slice(0, 170) + "..."
                     : item.content}
@@ -173,7 +138,7 @@ const LargeWidget = () => {
                 </span>
               </div>
               <p className="font-[600] text-[8.26px]">{item.title}</p>
-              <p className="text-[6.2px] font-gray">
+              <p className="text-[6.2px] text-gray">
                 {item.content.length > 100
                   ? item.content.slice(0, 100) + "..."
                   : item.content}

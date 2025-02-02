@@ -229,7 +229,6 @@ const StationSmall = ({ stationName, location, data }) => {
     (priceChange > 0 ? "+" : "") + priceChange.toFixed(2);
 
   // Calculate price change percent
-
   const priceChangePercent = ((priceChange / lastPrice) * 100).toFixed(2) + "%";
 
   return (

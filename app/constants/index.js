@@ -947,3 +947,49 @@ export const dollarRates = [
   { time: "29 Jan, 2025", price: 1250 },
   { time: "30 Jan, 2025", price: 1470 },
 ];
+
+export const news = [
+  {
+    paper: "Vanguard",
+    tags: [{ tag: "ICE", color: "#00796B" }],
+    title:
+      "Shareholders Enjoy a Massive Windfall as BP Expands Global Operations",
+    content:
+      "BP’s shareholders can expect a multibillion-dollar payout this year after the oil giant reported better than expected quarterly profits of almost $2.8 billion and set out plans to develop a new oil hub in the Gulf of Mexico.",
+    img: "",
+  },
+  {
+    paper: "Vanguard",
+    tags: [{ tag: "ICE", color: "#00796B" }],
+    title: "Eni granted regulator consent for NAOC sales to Oando",
+    content:
+      "BP’s shareholders can expect a multibillion-dollar payout this year after the oil giant reported better than expected quarterly profits of almost $2.8 billion and set out plans to develop a new oil hub in the Gulf of Mexico.",
+    img: "",
+  },
+  {
+    paper: "Vanguard",
+    tags: [{ tag: "ICE", color: "#00796B" }],
+    title: "Eni granted regulator consent for NAOC sales to Oando",
+    content:
+      "BP’s shareholders can expect a multibillion-dollar payout this year after the oil giant reported better than expected quarterly profits of almost $2.8 billion and set out plans to develop a new oil hub in the Gulf of Mexico.",
+    img: "",
+  },
+  {
+    paper: "Vanguard",
+    tags: [{ tag: "ICE", color: "#00796B" }],
+    title: "Eni granted regulator consent for NAOC sales to Oando",
+    content:
+      "BP’s shareholders can expect a multibillion-dollar payout this year after the oil giant reported better than expected quarterly profits of almost $2.8 billion and set out plans to develop a new oil hub in the Gulf of Mexico.",
+    img: "",
+  },
+];
+
+export const PMSWeekData = [
+  { day: "MON", price: 400.5 },
+  { day: "TUE", price: 800.0 },
+  { day: "WED", price: 950.0 },
+  { day: "THU", price: 850.0 },
+  { day: "FRI", price: 750.0 },
+  { day: "SAT", price: 650.0 },
+  { day: "SUN", price: 910.0 },
+];

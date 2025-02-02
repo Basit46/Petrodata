@@ -13,11 +13,11 @@ export const GlobalProvider = ({ children }) => {
 
   const [selectedWidgets, setSelectedWidgets] = useState([
     { id: 1, size: "M" },
-    { id: 6, size: "S" },
+    { id: 2, size: "S" },
     { id: 3, size: "S" },
     { id: 4, size: "S" },
     { id: 5, size: "S" },
-    { id: 2, size: "S" },
+    { id: 6, size: "S" },
     { id: 7, size: "S" },
     { id: 8, size: "S" },
     { id: 9, size: "S" },

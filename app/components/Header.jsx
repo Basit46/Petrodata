@@ -20,6 +20,11 @@ const Header = () => {
     month: "long",
     day: "numeric",
   });
+  const formattedDate2 = date.toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "short",
+    day: "numeric",
+  });
 
   const [darkMode, setDarkMode] = useState(true);
 
@@ -43,7 +48,8 @@ const Header = () => {
       <div className="w-full flex flex-col vsm:flex-row vsm:items-center gap-[10px] vsm:gap-0 justify-between">
         <div>
           <h1 className="text-[24px] font-[500] text-[#F5F5F5]">Hello, John</h1>
-          <p className="text-[#A3A3A3]">{formattedDate}</p>
+          <p className="hidden vsm:inline text-[#A3A3A3]">{formattedDate}</p>
+          <p className="inline vsm:hidden text-[#A3A3A3]">{formattedDate2}</p>
         </div>
 
         <div className="flex items-center gap-[10px]">

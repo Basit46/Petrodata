@@ -68,10 +68,10 @@ export const MediumWidget = () => {
   );
 
   return (
-    <div className="relative group origin-center w-full h-[149.8px] bg-[#171717] rounded-[12.4px] flex flex-col xmd:flex-row">
+    <div className="relative group origin-center w-full h-[149.8px] bg-[#171717] rounded-[12.4px] flex flex-row">
       <SelectPlusIcon id={5} size="M" />
 
-      <div className="w-full xmd:w-[55%] h-[300px] xmd:h-full flex flex-col">
+      <div className="w-[55%] h-full flex flex-col">
         <div className="flex items-center gap-[5px] py-[10px] px-[5px]">
           <div className="relative size-[16.53px]">
             <Image src="/flightIcon.png" alt="flight" fill />

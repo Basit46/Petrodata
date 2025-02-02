@@ -30,7 +30,7 @@ const Page = () => {
   const { selectedWidgets } = useGlobalContext();
 
   return (
-    <div>
+    <div className="">
       <Header />
 
       <div className="py-[30px]">

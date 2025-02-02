@@ -28,12 +28,13 @@ const layout = ({ children }) => {
       <div className="lg:flex-1 px-[20px] lg:px-0 flex flex-col xmd:flex-row gap-[30px]">
         <div className="flex-1 h-full py-[50px] lg:py-[30px]">{children}</div>
 
-        <div className="w-[200px] h-[400px] pt-[80px] sm:py-[50px] lg:py-[30px]">
-          <div>
+        <div className="w-[200px] h-[400px] sm:py-[50px] lg:py-[30px]">
+          <div className="w-full space-y-[10px] xmd:space-y-[20px] pr-[10px]">
             {selectedWidgets.map((widget) => (
-              <p key={widget.id}>
-                {widgetList[widget.id]} ({widget.size})
-              </p>
+              <div className="flex justify-between" key={widget.id}>
+                <p className="">{widgetList[widget.id]}</p>
+                <p>({widget.size})</p>
+              </div>
             ))}
           </div>
 

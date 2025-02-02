@@ -231,7 +231,7 @@ const StationSmall = ({ stationName, location, data }) => {
       </div>
 
       <div className="mt-[20px] w-full flex h-fit items-center justify-between gap-[20px]">
-        <p className="text-[48px] font-[600]">₦{lastPrice.toFixed(2)}</p>
+        <p className="text-[32px] font-[600]">₦{lastPrice.toFixed(2)}</p>
         <div>
           <p className="text-[12px] font-[500]" style={{ color: trendColor }}>
             {priceChangeFormatted}

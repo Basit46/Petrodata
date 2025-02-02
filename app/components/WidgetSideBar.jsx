@@ -53,6 +53,7 @@ const WidgetSideBar = () => {
           <Link
             key={i}
             href={item.path}
+            onClick={() => setIsWidgetBarOpen(false)}
             className={`${
               pathname === item.path ? "bg-[#404040]" : ""
             } w-full h-[36px] px-[10px] hover:bg-[#404040] rounded-[36px] flex items-center gap-[8px]`}

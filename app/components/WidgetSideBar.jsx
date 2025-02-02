@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
+import { BsChevronBarRight } from "react-icons/bs";
+import { FaTimes } from "react-icons/fa";
 import {
   LuSearch,
   LuTag,
@@ -29,8 +31,14 @@ const widgetSections = [
 const WidgetSideBar = () => {
   const pathname = usePathname();
 
+  const [isWidgetBarOpen, setIsWidgetBarOpen] = useState(false);
+
   return (
-    <div className="w-[220px] pl-[20px] pt-[30px] sticky top-0 h-screen">
+    <div
+      className={`${
+        isWidgetBarOpen ? "left-0" : "left-[-250px]"
+      } fixed duration-300 w-[220px] px-[20px] lg:pl-[20px] pt-[30px] lg:sticky top-0 h-screen z-[3] bg-ash lg:bg-transparent border-r border-r-white lg:border-r-0`}
+    >
       <div className="w-full h-[44px] bg-[#404040] rounded-[36px] border border-[#525252] flex px-[10px] items-center gap-[5px]">
         <LuSearch size={15} color="#A3A3A3" className="flex-shrink-0" />
         <input
@@ -54,6 +62,20 @@ const WidgetSideBar = () => {
           </Link>
         ))}
       </div>
+
+      <button
+        onClick={() => setIsWidgetBarOpen((prev) => !prev)}
+        className="lg:hidden fixed right-[20px] top-[20px] text-[20px]"
+      >
+        {isWidgetBarOpen ? <FaTimes /> : <BsChevronBarRight />}
+      </button>
+
+      {isWidgetBarOpen && (
+        <div
+          onClick={() => setIsWidgetBarOpen(false)}
+          className="fixed left-[220px] h-screen w-full top-0 z-[3]"
+        ></div>
+      )}
     </div>
   );
 };

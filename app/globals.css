@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components {
+  .widget-bg {
+    @apply relative w-full sm:w-[350px] h-[440px] bg-[#404040] rounded-[24px] p-[20px] flex flex-col justify-between;
+  }
+
   .select-size-wrap {
     @apply mt-auto w-full h-[36px] flex items-center justify-center gap-[20px] py-[10px];
   }
@@ -11,7 +15,7 @@
   }
 
   .small {
-    @apply relative size-[290px] bg-[#171717] rounded-[12.4px];
+    @apply relative w-[290px] h-[290px] sm:size-[290px] bg-[#171717] rounded-[12.4px];
   }
   .medium {
     @apply relative w-[604px] h-[290px] bg-[#171717] rounded-[12.4px];

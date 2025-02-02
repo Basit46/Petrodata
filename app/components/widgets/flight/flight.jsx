@@ -6,12 +6,31 @@ const Flight = ({ size }) => {
     case "S":
       return <SmallWidget />;
     case "M":
-      return <MediumWidget />;
+      return (
+        <>
+          <div className="block md:hidden">
+            <SmallWidget />
+          </div>
+          <div className="hidden md:!block">
+            <MediumWidget />
+          </div>
+        </>
+      );
     case "L":
-      return <LargeWidget />;
+      return (
+        <>
+          <div className="block md:hidden">
+            <SmallWidget />
+          </div>
+          <div className="hidden md:!block">
+            <LargeWidget />
+          </div>
+        </>
+      );
     default:
       return null;
   }
+  bg;
 };
 
 export default Flight;

@@ -34,7 +34,7 @@ const Page = () => {
       <Header />
 
       <div className="py-[30px]">
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-4 justify-center vsm:justify-start">
           {selectedWidgets.map(({ id, size }) => {
             const WidgetComponent = widgets[id];
             return WidgetComponent ? (
